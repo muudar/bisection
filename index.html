@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Bisection Method</h2>
+    <form>
+      <label for="function">Function:</label>
+      <p class="note"><i>Please enter the function relative to x (lowercase).</i></p>
+      <input type="text" id="function" name="function"
+      pattern="^([+\-]?([0-9]+(?:\.[0-9]*)?|\.[0-9]+)(?:[+\-*/^]([0-9]+(?:\.[0-9]*)?|\.[0-9]+|\(.*\)))*)$"
+      title="Please enter a valid mathematical function relative to x" placeholder = "f(x) = "><br>
+      <div class="input-group">
+        <div class = "xField">
+        <label for="x1">X1:</label>
+        <input type="number" id="x1" name="x1" placeholder = "Lower interval">
+    </div>
+    <div class = "xField">
+        <label for="x2">X2:</label>
+        <input type="number" id="x2" name="x2" placeholder = "Upper internval">
+    </div>
+      </div>
+      <button onclick = "submitFunc()">Submit</button>
+    </form>
+</body>
+<script src="script.js"></script>
+</html>

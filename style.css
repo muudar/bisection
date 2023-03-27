@@ -1,0 +1,80 @@
+form {
+    margin: auto;
+    width: 35%;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    text-align: center;
+
+  }
+  
+  /* Style the form headings */
+  h2 {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Style the form labels */
+  label {
+    display: block;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  /* Style the form input fields */
+  input[type="text"],
+  input[type="number"] {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+  }
+  
+  /* Style the form submit button */
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* Hover effect for the form submit button */
+  button:hover {
+    background-color: #45a049;
+  }
+
+  .input-group {
+    display: flex;
+    justify-content: space-evenly;
+    align-items:center;
+  }
+  
+  /* Style the x1 and x2 input fields */
+  .input-group input {
+    width: max(55%, 50px);
+  }
+
+  .xField{
+    display:flex;
+    align-items:center;
+  }
+
+  .xField label{
+    margin-right: 20px;
+  }
+
+  p{
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+  }
