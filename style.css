@@ -1,6 +1,6 @@
 form {
     margin: auto;
-    width: 35%;
+    width: 40%;
     border: 1px solid #ccc;
     padding: 10px;
     border-radius: 5px;
@@ -40,7 +40,7 @@ form {
   }
   
   /* Style the form submit button */
-  button {
+  .button {
     background-color: #4CAF50;
     color: white;
     padding: 10px 20px;
@@ -50,7 +50,7 @@ form {
   }
   
   /* Hover effect for the form submit button */
-  button:hover {
+  .button:hover {
     background-color: #45a049;
   }
 
@@ -77,4 +77,134 @@ form {
   p{
     font-size: 12px;
     font-family: Arial, sans-serif;
+  }
+
+  .error-message {
+    display: none;
+    width: 50%;
+    background-color: #ffe4e1;
+    border: 1px solid #ff7f50;
+    color: #ff7f50;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .error-message h2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0 0 10px;
+  }
+  
+  .error-message p {
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  .message-container{
+    width: 100%;
+    display:flex;
+    justify-content: center;
+  }
+
+
+  .immediate-success-message {
+    display: none;
+    background-color: #e6ffee;
+    border: 1px solid #008000;
+    color: #008000;
+    width: 50%;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .immediate-success-message h2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0 0 10px;
+  }
+  
+  .immediate-success-message p {
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  #myTable {
+    display:none;
+    font-family: Arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  /* Style the table header */
+  #myTable th {
+    background-color: #0077b6;
+    color: white;
+    font-weight: bold;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  /* Style the table rows */
+  #myTable tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  /* Style the table cells */
+  #myTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  /* Style the table cell containing the error */
+  #myTable td:last-child {
+    font-weight: bold;
+    color: red;
+  }
+
+  .fade-in {
+    opacity: 0; /* Set the initial opacity to 0 */
+    transform: translateY(10px); /* Move the row down by 10 pixels */
+  }
+  
+  /* Add a class to remove the animation effect */
+  .fade-in.active {
+    opacity: 1; /* Set the opacity back to 1 */
+    transform: translateY(0); /* Move the row back up to its original position */
+  }
+
+  .error-field{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+  }
+
+  .error-field input{
+    width: 25%;
+  }
+
+  .error-field label{
+    margin-right: 20px;
+  }
+
+  footer {
+    background-color: #f5f5f5;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .author {
+    font-weight: bold;
+    margin: 0 5px;
+  }
+
+  footer {
+    margin-top: 100px;
+    width: 98vw;
+    background-color: #f5f5f5;
+    padding: 20px;
+    text-align: center;
   }

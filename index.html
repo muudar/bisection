@@ -5,28 +5,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Numerical Methods</title>
 </head>
 <body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.5.0/math.min.js"></script>
     <h2>Bisection Method</h2>
-    <form>
+    <form onsubmit="submitFunc(event)">
       <label for="function">Function:</label>
       <p class="note"><i>Please enter the function relative to x (lowercase).</i></p>
-      <input type="text" id="function" name="function"
-      pattern="^([+\-]?([0-9]+(?:\.[0-9]*)?|\.[0-9]+)(?:[+\-*/^]([0-9]+(?:\.[0-9]*)?|\.[0-9]+|\(.*\)))*)$"
-      title="Please enter a valid mathematical function relative to x" placeholder = "f(x) = "><br>
+      <input type="text" id="function" name="function" required placeholder = "f(x) = "><br>
       <div class="input-group">
         <div class = "xField">
         <label for="x1">X1:</label>
-        <input type="number" id="x1" name="x1" placeholder = "Lower interval">
+        <input type="number" id="x1" name="x1" required placeholder = "Lower interval" step = "0.00001">
     </div>
     <div class = "xField">
         <label for="x2">X2:</label>
-        <input type="number" id="x2" name="x2" placeholder = "Upper internval">
+        <input type="number" id="x2" name="x2" required placeholder = "Upper internval" step = "0.00001">
     </div>
       </div>
-      <button onclick = "submitFunc()">Submit</button>
+      <div class = "error-field">
+        <label for="error">Accepted Error:</label>
+        <input type="number" id="error" name="error" required placeholder = "0.005" step = "0.00001" min = "0.0001">
+      </div>    
+      <input class = "button" type = "submit" value = "Submit">
     </form>
+    <div class = "message-container">
+        <div class="error-message">
+            <h2>Error</h2>
+            <p id = "error-message-text"></p>
+        </div>
+    </div>
+    <table id="myTable">
+        <thead>
+          <tr>
+            <th>Iteration</th>
+            <th>x1</th>
+            <th>x3</th>
+            <th>x2</th>
+            <th>f(x1)</th>
+            <th>f(x3)</th>
+            <th>f(x2)</th>
+            <th>Error</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Table rows will be added dynamically using JavaScript -->
+        </tbody>
+      </table>
+      <div class = "message-container">
+        <div class="immediate-success-message">
+            <h2>Success</h2>
+            <p id = "success-message-text"></p>
+        </div>
+    </div>
+    <footer>
+      <p>Made by <span class="author">Mohammed Mudher</span>, <span class="author">Youssef Tamer</span>, and <span class="author">Mohamed Salah</span></p>
+      <p>Supervised by <span class = "author">Eng. Ahmed Elbaz</span></p>
+    </footer>
 </body>
 <script src="script.js"></script>
 </html>
